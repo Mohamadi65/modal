@@ -6,3 +6,84 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+body{
+    background-color: #fff;
+    background-image: url(images/trees.jpg) ;
+    height: 100vh;
+    position: relative;
+}
+
+#open-btn{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 250px;
+    height: 50px;
+    font-size: 1rem;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 5px;
+    box-shadow:0 0 3px black ;
+    transition: .5s;
+}
+
+#open-btn:hover{
+    background-color: #fff;
+    color: black;
+}
+
+#modal{
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:100px ;
+    height: 50px;
+    border-radius: 5px;
+    /* padding: 20px 5px; */
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    animation: animatemodal;
+    animation-duration: .8s;
+    align-items: center;
+    padding: 0 5px;
+
+}
+#close{
+    font-size: 1.4rem;
+    margin-top: -3px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    outline: 0;
+}
+ #modal-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
+    
+ }
+
+ /* Modal animation */
+
+ @keyframes animatemodal{
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+ }
